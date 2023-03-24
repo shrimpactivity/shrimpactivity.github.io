@@ -1,39 +1,45 @@
-:root {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --theme-darkest: #0b0627;
-  --theme-light: #e65045;
-  
-  color: var(--theme-light);
-  
-}
-
 .app {
-  scroll-snap-type: y mandatory;
+  
 }
 
 .section {
-  background-color: var(--theme-darkest);
-  scroll-snap-align: start;
-  border: 2px solid blue;
+  background-color: var(--theme-background);
 }
 
-.center-content {
+.tile {
+  background-color: var(--theme-background-light);
+  position: relative;
+  font-size: 1.7rem;
   display: flex;
-  justify-content: 'center';
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.75s;
+}
+
+.tile-stripe {
+  background-color: var(--theme-yellow);
+  position: absolute;
+}
+
+.tile.selected .tile-stripe {
+  background-color: var(--theme-green);
+}
+
+.tile.selected {
+  background-color: var(--theme-background);
 }
 
 .links-container {
-  background-color: var(--theme-darkest);
   display: flex;
   justify-content: end;
 }
 
 .links-container span {
-  padding: 10px;
-}
-
-.links-container span {
-  padding: 10px;
+  border: 2px solid var(--theme-background);
+  padding: 20px 10px 20px 10px;
+  box-sizing: border-box;
 }
 
 .parallax-window {

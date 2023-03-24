@@ -2,36 +2,32 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 const Tile = (props) => {
-  const [showStripe, setShowStripe] = useState(false);
-  const STRIP_SIZE = '4px';
+  const [hover, setHover] = useState(false);
 
-  const handleMouseEnter = () => {
-    setShowStripe(true);
-  };
-
-  const handleMouseLeave = () => {
-    setShowStripe(false);
-  };
+  const width = props.width ? props.width : '100px';
+  const height = props.height ? props.height : '100px';
+  const stripeSize = props.borderSize ? props.borderSize : '4px';
 
   const horizontalStripeStyle = {
-    transition: showStripe || props.selected ? "width 0.75s" : "none",
-    width: showStripe || props.selected ? "100%" : "0",
-    height: STRIP_SIZE,
+    transition: hover || props.selected ? "width 0.75s" : "none",
+    width: hover || props.selected ? "100%" : "0",
+    height: stripeSize,
   };
 
   const verticalStripeStyle = {
-    transition: showStripe || props.selected ? "height 0.75s" : "none",
-    width: STRIP_SIZE,
-    height: showStripe || props.selected ? "100%" : "0",
+    transition: hover || props.selected ? "height 0.75s" : "none",
+    width: stripeSize,
+    height: hover || props.selected ? "100%" : "0",
   };
 
   return (
     <div
-      className={`menu-tile ${props.selected ? "selected" : ""}`}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      className={`tile ${props.selected ? "selected" : ""}`}
+      onMouseOver={() => setHover(true)}
+      onMouseOut={() => setHover(false)}
+      style={{width: props.width, height: props.height}}
     >
-      <span>{props.text}</span>
+      <div style={{textAlign: 'center'}}>{props.children}</div>
       <div
         className="tile-stripe"
         style={{ ...horizontalStripeStyle, top: "0px" }}
@@ -53,8 +49,10 @@ const Tile = (props) => {
 };
 
 Tile.propTypes = {
-  text: PropTypes.string.isRequired,
-  selected: PropTypes.bool.isRequired,
+  width: PropTypes.string,
+  height: PropTypes.string,
+  borderSize: PropTypes.number,
+  selected: PropTypes.bool,
 };
 
 export default Tile;

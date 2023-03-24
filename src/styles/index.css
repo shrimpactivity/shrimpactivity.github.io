@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Playfair+Display&display=swap');
+
+:root {
+  font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --theme-background: #0b0627;
+  --theme-background-light: #191142;
+  --theme-red: #e65045;
+  --theme-light-red: #f08078;
+  --theme-yellow: #BDAB31;
+  --theme-green: #8ccfbd;
+  
+  color: var(--theme-red);
+  background-image: url('../assets/wallpaper.jpg');
+  background-attachment: fixed;
+}
+
 body {
   margin: 0;
 }

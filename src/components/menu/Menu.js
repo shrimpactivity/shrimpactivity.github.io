@@ -1,11 +1,21 @@
 import React, { useRef, useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-scroll";
+
+import ArrowUp from "../../assets/caret-up.png";
+import Tile from "./Tile";
 
 import "../../styles/menu.css";
 
-import Tile from "./Tile";
-
-const TILE_NAMES = ["About", "Projects", "Recom-mends", "Art", "Photos", "Connect"];
+const TILE_SIZE = 120;
+const TILE_NAMES = [
+  "About",
+  "Projects",
+  "Recom-mends",
+  "Art",
+  "Photos",
+  "Connect",
+];
 
 const Container = (props) => {
   /**
@@ -22,7 +32,7 @@ const Container = (props) => {
     if (!refTilesContainer.current) return;
     const resizeObserver = new ResizeObserver(() => {
       setWidth(refTilesContainer.current.offsetWidth);
-    })
+    });
     resizeObserver.observe(refTilesContainer.current);
     return () => resizeObserver.disconnect();
   }, []);
@@ -36,21 +46,26 @@ const Container = (props) => {
   };
 
   const getTileTop = (index) => {
-    if (selectedTile === -1) {
-      return `${0.9 * index * getTileSize()}px`;
+    if (selectedTile !== -1 || width <= TILE_SIZE * 3) {
+      return "0px";
     }
-    return "0px";
-  }
+
+    let top = 0.6 * index * TILE_SIZE;
+    let position = (index + 1) * TILE_SIZE;
+    if (width < position) {
+      let row = Math.floor(position / width);
+      top -= row * TILE_SIZE;
+      
+    }
+    return `${top}px`;
+  };
 
   const getTileSize = () => {
-    if (width > TILE_NAMES.length * 100) {
-      return 100;
-    }
-    return Math.max(50, Math.floor(width / TILE_NAMES.length));
-  }
+    return `${TILE_SIZE}px`;
+  };
 
   return (
-    <div className="menu-container" > 
+    <div className="menu-container">
       <div className="tiles-container" ref={refTilesContainer}>
         {TILE_NAMES.map((name, index) => {
           return (
@@ -60,14 +75,25 @@ const Container = (props) => {
               style={{ top: getTileTop(index) }}
               onClick={() => handleTileClick(index)}
             >
-              <Tile text={name} selected={selectedTile === index}/>
+              <Tile
+                width={getTileSize()}
+                height={getTileSize()}
+                selected={selectedTile === index}
+              >
+                {name}
+              </Tile>
             </div>
           );
         })}
       </div>
-      <div className="menu-content-container">
-        
+      <div className="menu-content-container" style={{display: selectedTile === -1 ? 'none' : 'block'}}>
+        <div className="up-caret">
+          <Link to="menu-scroll" smooth={true}>
+            <img src={ArrowUp} />
+          </Link>
+        </div>
       </div>
+      <div className="menu-color-block one"></div>
     </div>
   );
 };

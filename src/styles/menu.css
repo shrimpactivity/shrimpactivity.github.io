@@ -2,12 +2,15 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
+  min-height: 600px;
 }
 
 .tiles-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  font-family: 'Playfair Display', "Times New Roman", Times, serif;
 }
 
 .tile-wrapper {
@@ -16,24 +19,31 @@
   transition: top 1s;
 }
 
-.menu-tile {
-  padding: 10px;
-  width: 90px;
-  height: 90px;
+.menu-content-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
-  cursor: pointer;
-  user-select: none;
 }
 
-.menu-tile.selected {
-  background-color: #2d385f;
+.up-caret {
+  margin-top: 80px;
+  transition: all 0.5s;
 }
 
-.tile-stripe {
-  background-color: #BDAB31;
+.up-caret:hover {
+  transform: scale(1.2);
+  filter: brightness(3);
+}
+
+.menu-color-block {
   position: absolute;
+}
+
+.menu-color-block.one {
+  background-color: var(--theme-yellow);
+  width: 300px;
+  height: 50px;
+  top: 0;
+  right: 0;
+  z-index: 0;
 }
