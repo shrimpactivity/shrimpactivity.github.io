@@ -1,0 +1,41 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --theme-darkest: #0b0627;
+  --theme-light: #e65045;
+  
+  color: var(--theme-light);
+  
+}
+
+.app {
+  scroll-snap-type: y mandatory;
+}
+
+.section {
+  background-color: var(--theme-darkest);
+  scroll-snap-align: start;
+  border: 2px solid blue;
+}
+
+.center-content {
+  display: flex;
+  justify-content: 'center';
+}
+
+.links-container {
+  background-color: var(--theme-darkest);
+  display: flex;
+  justify-content: end;
+}
+
+.links-container span {
+  padding: 10px;
+}
+
+.links-container span {
+  padding: 10px;
+}
+
+.parallax-window {
+  height: 40px;
+}

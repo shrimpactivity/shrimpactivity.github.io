@@ -1,0 +1,38 @@
+.splash-container {
+  margin-top: 40px;
+}
+
+.splash-content {
+  padding: 20px;
+}
+
+.name-container {
+  font-size: 5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.first-name {
+  margin-top: -15px;
+}
+
+.last-name {
+  text-align: right;
+  margin-top: -30px;
+}
+
+.portrait {
+  transform: scale(1.3) 2s;
+  max-width: 90vw;
+  height: 350px;
+  transition: transform 0.75s;
+}
+
+@media screen and (min-width: 500px) {
+  .name-container {
+    font-size: 8rem;
+  }
+
+  .portrait:hover {
+    transform: scale(1.4);
+  }
+}
