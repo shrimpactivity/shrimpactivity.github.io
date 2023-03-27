@@ -1,19 +1,32 @@
-import React from 'react'
+import React from "react";
 
-import Tile from './menu/Tile'
+import LinkedInIcon from "../assets/linked-in.png";
+import GithubIcon from "../assets/github-mark-white.png";
 
-const Header = props => {
-  const width = "80px"
-  const height = "50px";
-  const borderSize = 2;
+import "../styles/header.css";
 
+const Header = (props) => {
   return (
     <div className="links-container">
-      <Tile borderSize={borderSize}>Link 1</Tile>
-      <Tile borderSize={borderSize}>Link 2</Tile>
-      <Tile borderSize={borderSize}>Link 3</Tile>
+      <div>
+        <a
+          href="https://www.linkedin.com/in/carson-crow-29b83b254/"
+          target="_blank"
+        >
+          <img src={LinkedInIcon} height="30px" width="30px" />
+        </a>
+      </div>
+      <div>
+        <a
+          href="https://github.com/shrimpactivity"
+          target="_blank"
+        >
+          <img src={GithubIcon} height="30px" width="30px" />
+        </a>
+      </div>
+      <div><span>Resume &#x2B07;</span></div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

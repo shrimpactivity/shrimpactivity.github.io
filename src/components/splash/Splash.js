@@ -1,9 +1,8 @@
 import React from "react";
-import { Link } from "react-scroll";
 
 import Title from "./Title";
+import ScrollButton from "../ScrollButton";
 import Portrait from "../../assets/portrai-sepia.jpg";
-import ArrowDown from "../../assets/caret-down.png";
 
 import "../../styles/splash.css";
 
@@ -23,19 +22,16 @@ const Splash = () => {
           <Title />
         </div>
         <div className="portrait-container">
-          <img className="portrait" src={Portrait} />
+          <img className="portrait" src={Portrait} alt="Picture of me and my dog, Daisy."/>
         </div>
       </div>
       <div className="splash-about">
-        I'm a <b>full stack software engineer</b> with a math background and
+        I'm a <b>full stack software engineer</b> with a background in math and
         years of experience building vibrant apps.
       </div>
       <div className="down-caret">
-        <Link to="menu-scroll" smooth={true}>
-          <img src={ArrowDown} />
-        </Link>
-        
-        </div>
+        <ScrollButton to="menu-scroll"/>
+      </div>
     </div>
   );
 };

@@ -6,42 +6,22 @@
   background-color: var(--theme-background);
 }
 
-.tile {
-  background-color: var(--theme-background-light);
-  position: relative;
-  font-size: 1.7rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  user-select: none;
-  transition: background-color 0.75s;
-}
-
-.tile-stripe {
-  background-color: var(--theme-yellow);
-  position: absolute;
-}
-
-.tile.selected .tile-stripe {
-  background-color: var(--theme-green);
-}
-
-.tile.selected {
-  background-color: var(--theme-background);
-}
-
-.links-container {
-  display: flex;
-  justify-content: end;
-}
-
-.links-container span {
-  border: 2px solid var(--theme-background);
-  padding: 20px 10px 20px 10px;
-  box-sizing: border-box;
-}
-
 .parallax-window {
   height: 40px;
+}
+
+.scroll-button {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 500px) {
+  .scroll-button {
+    transition: all 0.5s;
+  }
+
+  .scroll-button:hover {
+    transform: scale(1.2);
+    filter: brightness(1.5);
+  }
 }

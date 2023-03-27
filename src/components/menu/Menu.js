@@ -3,12 +3,22 @@ import PropTypes from "prop-types";
 import { Link } from "react-scroll";
 
 import ArrowUp from "../../assets/caret-up.png";
+import MenuBackground from "../../assets/menu-background.png";
 import Tile from "./Tile";
 
 import "../../styles/menu.css";
+import ScrollButton from "../ScrollButton";
 
-const TILE_SIZE = 120;
+const STEP_BREAKPOINT = 960;
 const TILE_NAMES = [
+  "About",
+  "Projects",
+  "Likes",
+  "Art",
+  "Photos",
+  "Connect",
+];
+const TILE_CONTENTS = [
   "About",
   "Projects",
   "Recom-mends",
@@ -18,11 +28,6 @@ const TILE_NAMES = [
 ];
 
 const Container = (props) => {
-  /**
-   * When you click a tile:
-   *  - move all tiles to the left
-   *  - show the content window of the selected tile
-   */
 
   const [selectedTile, setSelectedTile] = useState(-1);
   const [width, setWidth] = useState(0);
@@ -46,26 +51,19 @@ const Container = (props) => {
   };
 
   const getTileTop = (index) => {
-    if (selectedTile !== -1 || width <= TILE_SIZE * 3) {
+    if (selectedTile !== -1 || width < STEP_BREAKPOINT) {
       return "0px";
     }
-
-    let top = 0.6 * index * TILE_SIZE;
-    let position = (index + 1) * TILE_SIZE;
-    if (width < position) {
-      let row = Math.floor(position / width);
-      top -= row * TILE_SIZE;
-      
-    }
-    return `${top}px`;
+    return `${index * 85}px`;
   };
 
-  const getTileSize = () => {
-    return `${TILE_SIZE}px`;
-  };
+  const backgroundStyle = {
+    opacity: selectedTile === -1 ? null : 0, 
+  }
 
   return (
     <div className="menu-container">
+      <img className="menu-background" src={MenuBackground} style={backgroundStyle}/>
       <div className="tiles-container" ref={refTilesContainer}>
         {TILE_NAMES.map((name, index) => {
           return (
@@ -76,9 +74,8 @@ const Container = (props) => {
               onClick={() => handleTileClick(index)}
             >
               <Tile
-                width={getTileSize()}
-                height={getTileSize()}
                 selected={selectedTile === index}
+                borderSize="8px"
               >
                 {name}
               </Tile>
@@ -86,14 +83,12 @@ const Container = (props) => {
           );
         })}
       </div>
-      <div className="menu-content-container" style={{display: selectedTile === -1 ? 'none' : 'block'}}>
+      <div className="menu-content-container" style={{display: selectedTile === -1 ? 'none' : 'flex'}}>
+        <div>{TILE_NAMES[selectedTile]}</div>
         <div className="up-caret">
-          <Link to="menu-scroll" smooth={true}>
-            <img src={ArrowUp} />
-          </Link>
+          <ScrollButton to="menu-scroll" direction="up" />
         </div>
       </div>
-      <div className="menu-color-block one"></div>
     </div>
   );
 };

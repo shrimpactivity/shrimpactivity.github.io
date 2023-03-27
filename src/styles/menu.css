@@ -3,36 +3,62 @@
   display: flex;
   flex-direction: column;
   margin-top: 50px;
-  min-height: 600px;
+  margin-bottom: 50px;
 }
 
 .tiles-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   font-family: 'Playfair Display', "Times New Roman", Times, serif;
 }
 
 .tile-wrapper {
   position: relative;
   display: inline-block;
+  margin: 6px;
   transition: top 1s;
+}
+
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  padding: 5px;
+  position: relative;
+  font-size: 1.4rem;
+  background-color: var(--theme-background-light);
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.75s;
+}
+
+.tile:hover {
+  background-color: var(--theme-background);
+}
+
+.tile.selected {
+  background-color: var(--theme-background);
+}
+
+.tile-stripe {
+  background-color: var(--theme-green);
+  position: absolute;
+}
+
+.tile.selected .tile-stripe {
+  background-color: var(--theme-yellow);
 }
 
 .menu-content-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-}
-
-.up-caret {
-  margin-top: 80px;
-  transition: all 0.5s;
-}
-
-.up-caret:hover {
-  transform: scale(1.2);
-  filter: brightness(3);
+  animation: fadeIn 0.5s; 
 }
 
 .menu-color-block {
@@ -46,4 +72,46 @@
   top: 0;
   right: 0;
   z-index: 0;
+}
+
+.menu-background {
+  display: none;
+  position: absolute;
+  transition: opacity 1s;
+}
+
+.up-caret {
+  margin: 50px;
+}
+
+@media screen and (min-width: 520px) {
+  .tile {
+    width: 120px;
+    height: 120px;
+    font-size: 1.7rem;
+    padding: 10px;
+  }
+
+  .tile-wrapper {
+    margin: 10px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .menu-container {
+    min-height: 600px;
+  }
+
+  .menu-background {
+    display: block;
+  }
+
+  .menu-content-container {
+    animation: fadeIn 1.2s; 
+  }
+}
+
+@keyframes fadeIn {
+  0%, 50% { opacity: 0 }
+  100% { opacity: 1 }
 }

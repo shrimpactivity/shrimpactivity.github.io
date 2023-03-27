@@ -3,10 +3,14 @@ import PropTypes from "prop-types";
 
 const Tile = (props) => {
   const [hover, setHover] = useState(false);
-
-  const width = props.width ? props.width : '100px';
-  const height = props.height ? props.height : '100px';
   const stripeSize = props.borderSize ? props.borderSize : '4px';
+
+  const tileStyle = {
+    width: props.width, 
+    height: props.height, 
+    maxWidth: props.maxWidth, 
+    height: props.maxHeight,
+  }
 
   const horizontalStripeStyle = {
     transition: hover || props.selected ? "width 0.75s" : "none",
@@ -25,7 +29,7 @@ const Tile = (props) => {
       className={`tile ${props.selected ? "selected" : ""}`}
       onMouseOver={() => setHover(true)}
       onMouseOut={() => setHover(false)}
-      style={{width: props.width, height: props.height}}
+      style={tileStyle}
     >
       <div style={{textAlign: 'center'}}>{props.children}</div>
       <div
@@ -51,7 +55,7 @@ const Tile = (props) => {
 Tile.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
-  borderSize: PropTypes.number,
+  borderSize: PropTypes.string,
   selected: PropTypes.bool,
 };
 

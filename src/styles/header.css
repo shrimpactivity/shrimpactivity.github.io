@@ -1,0 +1,14 @@
+.links-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.links-container div {
+  padding: 10px 10px 7px 10px;
+  height: 30px;
+}
+
+.links-container div:hover {
+  background-color: var(--theme-background-light);
+}
