@@ -59,6 +59,7 @@
   justify-content: center;
   align-items: center;
   animation: fadeIn 0.5s; 
+  color: oldlace;
 }
 
 .menu-color-block {
@@ -77,11 +78,23 @@
 .menu-background {
   display: none;
   position: absolute;
-  transition: opacity 1s;
+  transition: all 1s;
+  width: 100%;
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.5s; 
+}
+
+.menu-content:first-child {
+  padding: 0px 20px 0px 20px;
 }
 
 .up-caret {
-  margin: 50px;
+  margin-top: 50px;
 }
 
 @media screen and (min-width: 520px) {
@@ -107,11 +120,11 @@
   }
 
   .menu-content-container {
-    animation: fadeIn 1.2s; 
+    animation: fadeIn 1.5s; 
   }
 }
 
 @keyframes fadeIn {
-  0%, 50% { opacity: 0 }
+  0%, 20% { opacity: 0 }
   100% { opacity: 1 }
 }

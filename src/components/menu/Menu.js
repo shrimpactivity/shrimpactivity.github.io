@@ -2,12 +2,15 @@ import React, { useRef, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-scroll";
 
-import ArrowUp from "../../assets/caret-up.png";
 import MenuBackground from "../../assets/menu-background.png";
+import ScrollButton from "../ScrollButton";
 import Tile from "./Tile";
+import About from './content/About';
 
 import "../../styles/menu.css";
-import ScrollButton from "../ScrollButton";
+import "../../styles/card.css";
+import Projects from "./content/Projects";
+
 
 const STEP_BREAKPOINT = 960;
 const TILE_NAMES = [
@@ -19,8 +22,8 @@ const TILE_NAMES = [
   "Connect",
 ];
 const TILE_CONTENTS = [
-  "About",
-  "Projects",
+  <About />,
+  <Projects />,
   "Recom-mends",
   "Art",
   "Photos",
@@ -59,6 +62,7 @@ const Container = (props) => {
 
   const backgroundStyle = {
     opacity: selectedTile === -1 ? null : 0, 
+    height: selectedTile === -1 ? '600px' : '0px', 
   }
 
   return (
@@ -84,7 +88,7 @@ const Container = (props) => {
         })}
       </div>
       <div className="menu-content-container" style={{display: selectedTile === -1 ? 'none' : 'flex'}}>
-        <div>{TILE_NAMES[selectedTile]}</div>
+        {TILE_CONTENTS[selectedTile]}
         <div className="up-caret">
           <ScrollButton to="menu-scroll" direction="up" />
         </div>

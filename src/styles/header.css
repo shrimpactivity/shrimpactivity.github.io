@@ -1,6 +1,6 @@
 .header-container {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -20,4 +20,10 @@
   border-radius: 20px;
   padding: 2px 2px 2px 9px;
   margin: 3px 10px 0px 5px;
+  cursor: pointer;
+}
+
+.resume-download:hover {
+  background-color: var(--theme-background-light);
+  color: var(--theme-light-red);
 }

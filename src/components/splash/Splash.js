@@ -2,7 +2,7 @@ import React from "react";
 
 import Title from "./Title";
 import ScrollButton from "../ScrollButton";
-import Portrait from "../../assets/portrai-sepia.jpg";
+import Portrait from "../../assets/portrait-sepia.jpg";
 
 import "../../styles/splash.css";
 
@@ -22,11 +22,11 @@ const Splash = () => {
           <Title />
         </div>
         <div className="portrait-container">
-          <img className="portrait" src={Portrait} alt="Picture of me and my dog, Daisy."/>
+          <img className="portrait" src={Portrait} alt="Me and my dog, Daisy."/>
         </div>
       </div>
       <div className="splash-about">
-        I'm a <b>full stack software engineer</b> with a background in math and
+        I'm a full stack software engineer with a background in math and
         years of experience building vibrant apps.
       </div>
       <div className="down-caret">
