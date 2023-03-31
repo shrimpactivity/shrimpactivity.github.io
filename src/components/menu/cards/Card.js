@@ -6,16 +6,21 @@ const Card = (props) => {
   return (
     <div className="card">
       {props.title && <div className="card-title">{props.title}</div>}
+      {props.children && <div className="card-content">{props.children}</div>}
       {props.image && (
         <a href={props.imageLink} target="_blank">
+          <div style={{display: "flex", justifyContent:"center"}}>
           <LazyLoadImage
             className="card-image"
             src={props.image}
             alt={`${props.title} logo`}
+            width={props.imageWidth ? props.imageWidth : '100%'}
+            height={props.imageHeight}
           />
+          </div>
         </a>
       )}
-      {props.children && <div className="card-content">{props.children}</div>}
+      
     </div>
   );
 };

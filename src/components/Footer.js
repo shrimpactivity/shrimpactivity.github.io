@@ -8,7 +8,7 @@ const Footer = props => {
   const borderSize = "2px";
 
   return (
-    <div className="links-container">
+    <div className="links-container" style={{marginTop: '150px'}}>
       <span>Built with React</span>
       <span>What is shrimp activity?</span>
     </div>

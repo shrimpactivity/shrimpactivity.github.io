@@ -1,6 +1,6 @@
 import React from 'react'
 
-import CardContainer from '../cards/Container';
+import CardContainer from '../cards/CardContainer';
 import Card from '../cards/Card';
 
 import GhostWriter from "../../../assets/project-logos/ghostwriter-logo.png";

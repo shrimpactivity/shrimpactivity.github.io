@@ -1,21 +1,21 @@
 import React from "react";
 
-import CardContainer from "../cards/Container";
+import CardContainer from "../cards/CardContainer";
 import Card from "../cards/Card";
 
 export const About = () => {
   return (
     <div className="menu-content">
-      <div style={{ maxWidth: "600px", textAlign: "center" }}>
+      <div className="menu-content-header">
         <p>
           My programming journey began over ten years ago, building Java applets
-          and web games in high school and hosting them on our computer lab's
+          and web games which I hosted on my high school computer lab's
           server. Much to my teachers' chagrin, they were accessible by any
           machine on the school network. The situation was only made worse when
           I added high score tables...
         </p>
-        <p>Needless to say, I've been coding ever since. </p>
-        <p>Here's what I know:</p>
+        <p style={{textAlign: 'center'}}>Needless to say, I've been coding ever since. </p>
+        <p style={{textAlign: 'center'}}>Here's what I know:</p>
       </div>
 
       <CardContainer>
@@ -37,7 +37,7 @@ export const About = () => {
           </div>
         </Card>
         <Card title="Tools">
-          <div class="two-column">
+          <div className="two-column">
             <div>React</div>
             <div>Redux</div>
             <div>React-router</div>
@@ -54,7 +54,7 @@ export const About = () => {
             <div>IntelliJ</div>
           </div>
         </Card>
-        <Card title="Misc.">
+        <Card title="Workflow">
           <div
             style={{
               display: "flex",
@@ -63,6 +63,7 @@ export const About = () => {
             }}
           >
             <div>Client Support</div>
+            <div>Agile</div>
             <div>Scrum</div>
             <div>Kanban</div>
             <div>TDD</div>

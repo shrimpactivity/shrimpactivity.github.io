@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Container = props => {
+const CardContainer = props => {
   return (
     <div className="card-container">
       {props.children}
@@ -9,6 +9,6 @@ const Container = props => {
   )
 }
 
-Container.propTypes = {}
+CardContainer.propTypes = {}
 
-export default Container
+export default CardContainer

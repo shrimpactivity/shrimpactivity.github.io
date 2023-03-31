@@ -6,17 +6,17 @@ import MenuBackground from "../../assets/menu-background.png";
 import ScrollButton from "../ScrollButton";
 import Tile from "./Tile";
 import About from './content/About';
+import Projects from "./content/Projects";
+import Picks from "./content/Picks";
 
 import "../../styles/menu.css";
 import "../../styles/card.css";
-import Projects from "./content/Projects";
-
 
 const STEP_BREAKPOINT = 960;
 const TILE_NAMES = [
   "About",
   "Projects",
-  "Likes",
+  "Picks",
   "Art",
   "Photos",
   "Connect",
@@ -24,13 +24,13 @@ const TILE_NAMES = [
 const TILE_CONTENTS = [
   <About />,
   <Projects />,
-  "Recom-mends",
+  <Picks />,
   "Art",
   "Photos",
   "Connect",
 ];
 
-const Container = (props) => {
+const Menu = (props) => {
 
   const [selectedTile, setSelectedTile] = useState(-1);
   const [width, setWidth] = useState(0);
@@ -61,7 +61,7 @@ const Container = (props) => {
   };
 
   const backgroundStyle = {
-    opacity: selectedTile === -1 ? null : 0, 
+    opacity: selectedTile === -1 ? 1 : 0, 
     height: selectedTile === -1 ? '600px' : '0px', 
   }
 
@@ -97,6 +97,6 @@ const Container = (props) => {
   );
 };
 
-Container.propTypes = {};
+Menu.propTypes = {};
 
-export default Container;
+export default Menu;
