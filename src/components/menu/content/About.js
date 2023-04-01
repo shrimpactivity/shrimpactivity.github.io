@@ -8,10 +8,10 @@ export const About = () => {
     <div className="menu-content">
       <div className="menu-content-header">
         <p>
-          My programming journey began over ten years ago, building Java applets
-          and web games which I hosted on my high school computer lab's
-          server. Much to my teachers' chagrin, they were accessible by any
-          machine on the school network. The situation was only made worse when
+          I started programming over ten years ago, building Java applets
+          and web games which I hosted on my school's computer lab
+          server. Much to my teachers' chagrin, they were accessible by any student
+          machine on the network. The situation was only made worse when
           I added high score tables...
         </p>
         <p style={{textAlign: 'center'}}>Needless to say, I've been coding ever since. </p>
@@ -19,7 +19,7 @@ export const About = () => {
       </div>
 
       <CardContainer>
-        <Card title="Languages" link="www.google.com">
+        <Card title="Languages" height="400px">
           <div
             style={{
               display: "flex",
@@ -62,12 +62,14 @@ export const About = () => {
               alignItems: "center",
             }}
           >
-            <div>Client Support</div>
-            <div>Agile</div>
+            <div>Stack Overflow</div>
             <div>Scrum</div>
+            <div>Agile</div>
             <div>Kanban</div>
+            <div>Client Support</div>
             <div>TDD</div>
             <div>Clean Code</div>
+            
           </div>
         </Card>
       </CardContainer>

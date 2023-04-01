@@ -1,12 +1,12 @@
 import { Element } from "react-scroll";
 import { useEffect, useState } from "react";
 
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
 import Splash from "./components/splash/Splash";
 import TileMenu from "./components/menu/Menu";
-import "./styles/app.css";
 import Section from "./components/layout/Section";
+import "./styles/app.css";
 
 const App = () => {
   const [offsetY, setOffsetY] = useState(0);

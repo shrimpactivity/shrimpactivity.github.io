@@ -1,7 +1,5 @@
 import React from 'react'
 
-import Tile from './menu/Tile'
-
 const Footer = props => {
   const width = "80px"
   const height = "50px";

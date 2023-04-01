@@ -10,6 +10,11 @@ import GitBean from "../../../assets/project-logos/gitbean-logo.png";
 const Projects = props => {
   return (
     <div className="menu-content">
+      <div className="menu-content-header">
+        <p style={{textAlign: "center"}}>
+          Check out some of my personal projects. Click the image to be redirected.
+        </p>
+      </div>
       <CardContainer>
         <Card title="GhostWriter" image={GhostWriter} imageLink="https://ghost-writer.herokuapp.com"></Card>
         <Card title="Pigment" image={Pigment} imageLink="https://shrimpactivity.github.io/pigment/"></Card>

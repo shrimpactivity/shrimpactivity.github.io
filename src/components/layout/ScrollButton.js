@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-scroll";
 
-import ArrowDown from "../assets/icons/caret-down.png";
-import ArrowUp from "../assets/icons/caret-up.png";
+import ArrowDown from "../../assets/icons/caret-down.png";
+import ArrowUp from "../../assets/icons/caret-up.png";
 
 const ScrollButton = (props) => {
   return (

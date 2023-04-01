@@ -14,12 +14,6 @@
   justify-content: center;
 }
 
-.parallax {
-  height: 40px;
-  background-image: url('../assets/wallpaper.jpg');
-  background-position: fixed;
-}
-
 @media screen and (min-width: 500px) {
   .scroll-button {
     transition: all 0.5s;

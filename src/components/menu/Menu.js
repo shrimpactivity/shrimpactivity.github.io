@@ -3,11 +3,13 @@ import PropTypes from "prop-types";
 import { Link } from "react-scroll";
 
 import MenuBackground from "../../assets/menu-background.png";
-import ScrollButton from "../ScrollButton";
+import ScrollButton from "../layout/ScrollButton";
 import Tile from "./Tile";
 import About from './content/About';
 import Projects from "./content/Projects";
 import Picks from "./content/Picks";
+import Art from "./content/Art";
+import Photos from "./content/Photos";
 
 import "../../styles/menu.css";
 import "../../styles/card.css";
@@ -16,17 +18,17 @@ const STEP_BREAKPOINT = 960;
 const TILE_NAMES = [
   "About",
   "Projects",
-  "Picks",
   "Art",
   "Photos",
+  "Picks",
   "Connect",
 ];
 const TILE_CONTENTS = [
   <About />,
   <Projects />,
+  <Art />,
+  <Photos />,
   <Picks />,
-  "Art",
-  "Photos",
   "Connect",
 ];
 

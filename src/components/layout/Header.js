@@ -1,10 +1,10 @@
 import React from "react";
 
-import LinkedInIcon from "../assets/icons/linked-in.png";
-import GithubIcon from "../assets/icons/github-mark-white.png";
-import ArrowDown from "../assets/icons/arrow-down.png";
+import LinkedInIcon from "../../assets/icons/linked-in.png";
+import GithubIcon from "../../assets/icons/github-mark-white.png";
+import ArrowDown from "../../assets/icons/arrow-down.png";
 
-import "../styles/header.css";
+import "../../styles/header.css";
 
 const Header = (props) => {
   return (
