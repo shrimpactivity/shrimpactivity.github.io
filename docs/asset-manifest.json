@@ -1,10 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.c7bcf1ad.css",
-    "main.js": "/static/js/main.c02eb18c.js",
+    "main.css": "/static/css/main.5401da3d.css",
+    "main.js": "/static/js/main.da6f7165.js",
+    "static/media/shrimp.png": "/static/media/shrimp.107c30b3b2e7abe54175.png",
     "static/media/portrait-sepia.jpg": "/static/media/portrait-sepia.d701385b4c2e05a9701d.jpg",
     "static/media/6.jpg": "/static/media/6.5e09b08c79366cf1c3ed.jpg",
     "static/media/gitbean-logo.png": "/static/media/gitbean-logo.d9c92b96a32869ecb52b.png",
+    "static/media/resume.pdf": "/static/media/resume.848513139ba2d89ca628.pdf",
     "static/media/7.jpg": "/static/media/7.4ec2ccbd1e9493db5f34.jpg",
     "static/media/3.jpg": "/static/media/3.246d62c30bb743619086.jpg",
     "static/media/8.jpg": "/static/media/8.3d1fddcc12f53a025043.jpg",
@@ -17,12 +19,13 @@
     "static/media/10.jpg": "/static/media/10.749d8bfb75fbce79be3b.jpg",
     "static/media/pigment-logo.png": "/static/media/pigment-logo.66a4813d3075bc04bd87.png",
     "static/media/ghostwriter-logo.png": "/static/media/ghostwriter-logo.57350ff479cadbd93d05.png",
+    "static/media/react.png": "/static/media/react.bd9c0ab2af886b754cb5.png",
     "index.html": "/index.html",
-    "main.c7bcf1ad.css.map": "/static/css/main.c7bcf1ad.css.map",
-    "main.c02eb18c.js.map": "/static/js/main.c02eb18c.js.map"
+    "main.5401da3d.css.map": "/static/css/main.5401da3d.css.map",
+    "main.da6f7165.js.map": "/static/js/main.da6f7165.js.map"
   },
   "entrypoints": [
-    "static/css/main.c7bcf1ad.css",
-    "static/js/main.c02eb18c.js"
+    "static/css/main.5401da3d.css",
+    "static/js/main.da6f7165.js"
   ]
 }

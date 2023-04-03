@@ -5,8 +5,9 @@ import ShrimpPic from '../../assets/shrimp.png';
 
 const Shrimp = props => {
   return (
-    <div style={{display: 'flex', justifyContent: 'center'}}>
-      <img className="shrimp-pic" src={ShrimpPic} />
+    <div className="shrimp-pic-wrapper" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+      <img className="shrimp-pic" src={ShrimpPic} alt="shrimp in office chair at computer"/>
+      <figcaption>Actual photo of Carson at his desk</figcaption>
     </div>
   )
 }

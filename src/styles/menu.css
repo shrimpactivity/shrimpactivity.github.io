@@ -87,6 +87,7 @@
 
 .shuffle-button {
   position: relative;
+  cursor: pointer;
 }
 
 .shuffle-button img{
