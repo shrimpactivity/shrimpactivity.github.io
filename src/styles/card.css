@@ -25,17 +25,19 @@
 
 .card-image {
   animation: fadeIn 1.5s;
+  transition: all 0.6s;
 }
 
-.card-image:hover {
-  background-color: var(--theme-background-light);
+.projects-tab .card-image:hover {
+  filter: drop-shadow(0px 0px 10px var(--theme-red));
+  transform: scale(1.2);
 }
 
 .card-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding: 5px;
   text-align: center;
 }

@@ -91,11 +91,25 @@
 
 .shuffle-button img{
   width: 30px;
+  transition: transform 0.6s;
 }
 
 .shuffle-button img:hover{
   transform: scale(1.4);
   filter: brightness(2);
+}
+
+.connect-tab {
+  font-size: 1.6rem;
+}
+
+.connect-tab div {
+  padding: 20px 0px 10px 0px;
+}
+
+.connect-tab .resume-download {
+  margin: 20px 0px 10px;
+  padding: 5px;
 }
 
 @media screen and (min-width: 520px) {

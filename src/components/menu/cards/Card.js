@@ -21,10 +21,10 @@ const Card = (props) => {
     <div className="card">
       {props.title && <div className="card-title">{props.title}</div>}
       {props.children && <div className="card-content">{props.children}</div>}
-      {props.image && (<div style={imageContainerStyle}>
+      {props.image && (<div className="card-image-container" style={imageContainerStyle}>
         <div>
-          <a href={props.imageLink} target="_blank">
-            <LazyLoadImage {...imageProps}/>
+          <a href={props.imageLink} target="_blank" rel="noreferrer">
+            <LazyLoadImage {...imageProps} />
           </a>
         </div>
       </div>)}

@@ -14,20 +14,21 @@ const Header = (props) => {
           href="https://www.linkedin.com/in/carson-crow-29b83b254/"
           target="_blank"
         >
-          <img src={LinkedInIcon} height="30px" width="30px" />
+          <img src={LinkedInIcon} height="30px" width="30px" alt="linked in link"/>
         </a>
       </div>
       <div className="link-icon">
         <a
           href="https://github.com/shrimpactivity"
           target="_blank"
+          rel="noreferrer"
         >
-          <img src={GithubIcon} height="30px" width="30px" />
+          <img src={GithubIcon} height="30px" width="30px" alt="github link"/>
         </a>
       </div>
       <div className="resume-download">
         <span>Download CV TODO: link file</span>
-        <img src={ArrowDown} height="25px" />
+        <img src={ArrowDown} height="30px" alt="resume download button"/>
       </div>
     </div>
   );

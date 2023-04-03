@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.252cae7e.css",
+    "main.js": "/static/js/main.242ab247.js",
+    "static/media/wallpaper.jpg": "/static/media/wallpaper.7e8b3846360324954fb0.jpg",
+    "static/media/portrait-sepia.jpg": "/static/media/portrait-sepia.d701385b4c2e05a9701d.jpg",
+    "static/media/gitbean-logo.png": "/static/media/gitbean-logo.818cde5ab6070115dc20.png",
+    "static/media/pigment-logo.png": "/static/media/pigment-logo.66a4813d3075bc04bd87.png",
+    "static/media/ghostwriter-logo.png": "/static/media/ghostwriter-logo.9823ae87e528dd74011e.png",
+    "index.html": "/index.html",
+    "main.252cae7e.css.map": "/static/css/main.252cae7e.css.map",
+    "main.242ab247.js.map": "/static/js/main.242ab247.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.252cae7e.css",
+    "static/js/main.242ab247.js"
+  ]
+}

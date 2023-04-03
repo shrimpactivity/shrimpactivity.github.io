@@ -1,6 +1,4 @@
 import React, { useRef, useState, useEffect } from "react";
-import PropTypes from "prop-types";
-import { Link } from "react-scroll";
 
 import MenuBackground from "../../assets/menu-background.png";
 import ScrollButton from "../layout/ScrollButton";
@@ -10,6 +8,7 @@ import Projects from "./content/Projects";
 import Picks from "./content/Picks";
 import Art from "./content/Art";
 import Photos from "./content/Photos";
+import Connect from "./content/Connect";
 
 import "../../styles/menu.css";
 import "../../styles/card.css";
@@ -29,7 +28,7 @@ const TILE_CONTENTS = [
   <Art />,
   <Photos />,
   <Picks />,
-  "Connect",
+  <Connect />,
 ];
 
 const Menu = (props) => {
@@ -69,7 +68,7 @@ const Menu = (props) => {
 
   return (
     <div className="menu-container">
-      <img className="menu-background" src={MenuBackground} style={backgroundStyle}/>
+      <img className="menu-background" src={MenuBackground} style={backgroundStyle} alt="menu background"/>
       <div className="tiles-container" ref={refTilesContainer}>
         {TILE_NAMES.map((name, index) => {
           return (
@@ -98,7 +97,5 @@ const Menu = (props) => {
     </div>
   );
 };
-
-Menu.propTypes = {};
 
 export default Menu;
