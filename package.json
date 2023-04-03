@@ -13,7 +13,6 @@
     "react-scroll": "^1.8.9",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://shrimpactivity.github.io",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && rm -r docs && mv -v build docs",
