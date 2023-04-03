@@ -16,8 +16,7 @@
   "homepage": "https://shrimpactivity.github.io",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "deploy": "mv -v build docs && git push master build",
+    "build": "react-scripts build && rm -r docs && mv -v build docs",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
