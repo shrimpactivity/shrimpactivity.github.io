@@ -6,7 +6,9 @@ import Footer from "./components/layout/Footer";
 import Splash from "./components/splash/Splash";
 import TileMenu from "./components/menu/Menu";
 import Section from "./components/layout/Section";
+
 import "./styles/app.css";
+import './styles/buttons.css';
 
 const App = () => {
   const [offsetY, setOffsetY] = useState(0);

@@ -2,8 +2,8 @@ import React from "react";
 
 import LinkedInIcon from "../../../assets/icons/linked-in.png";
 import GithubIcon from "../../../assets/icons/github-mark-white.png";
-import ArrowDown from "../../../assets/icons/arrow-down.png";
-import Resume from "../../../assets/resume.pdf";
+import ResumeDownload from "../../buttons/ResumeDownload";
+
 
 const Connect = (props) => {
   return (
@@ -34,12 +34,7 @@ const Connect = (props) => {
           </a>
         </span>
       </div>
-      <a href={Resume} className="resume-anchor" download="Carson Crow Resume.pdf">
-        <div className="resume-download">
-          <span>Resume</span>
-          <img src={ArrowDown} height="30px" alt="resume download button" />
-        </div>
-      </a>
+      <ResumeDownload />
     </div>
   );
 };

@@ -43,6 +43,7 @@ export const About = () => {
             <div>React-router</div>
             <div>Jest</div>
             <div>Express</div>
+            <div>RESTful APIs</div>
             <div>Mongo</div>
             <div>Npm</div>
             <div>Maven</div>

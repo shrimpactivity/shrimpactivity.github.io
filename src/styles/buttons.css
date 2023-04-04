@@ -1,0 +1,43 @@
+.scroll-button {
+  display: flex;
+  justify-content: center;
+}
+
+.resume-download {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--theme-red);
+  border-radius: 10px;
+  padding: 2px 8px 2px 12px;
+  margin: 6px 10px 0px 5px;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+
+.resume-download img {
+  width: 1.2em;
+  height: 1.2em;
+  margin-left: 3px;
+}
+
+.resume-anchor {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.connect-tab .resume-download {
+  font-size: 1.8rem;
+  padding-left: 20px;
+  padding-right: 18px;
+}
+
+.connect-tab .resume-download img{
+  height: 1em;
+  width: 1em;
+}
+
+.resume-download:hover {
+  background-color: var(--theme-background-highlight);
+  color: var(--theme-light-red)
+}

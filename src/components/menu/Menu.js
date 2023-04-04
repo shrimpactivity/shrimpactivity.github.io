@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 
 import MenuBackground from "../../assets/menu-background.png";
-import ScrollButton from "../layout/ScrollButton";
+import ScrollButton from "../buttons/ScrollButton";
 import Tile from "./Tile";
 import About from './content/About';
 import Projects from "./content/Projects";

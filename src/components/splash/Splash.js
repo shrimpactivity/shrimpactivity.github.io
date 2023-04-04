@@ -1,7 +1,7 @@
 import React from "react";
 
 import Title from "./Title";
-import ScrollButton from "../layout/ScrollButton";
+import ScrollButton from "../buttons/ScrollButton";
 import Portrait from "../../assets/portrait-sepia.jpg";
 
 import "../../styles/splash.css";

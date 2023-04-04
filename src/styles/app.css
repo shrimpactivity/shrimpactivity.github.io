@@ -9,32 +9,6 @@
   background-color: var(--theme-background);
 }
 
-.scroll-button {
-  display: flex;
-  justify-content: center;
-}
-
-.resume-download {
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  border: 2px solid var(--theme-red);
-  border-radius: 10px;
-  padding: 2px 6px 2px 12px;
-  margin: 6px 10px 0px 5px;
-  cursor: pointer;
-}
-
-.resume-anchor {
-  text-decoration: inherit;
-  color: inherit;
-}
-
-.resume-download:hover {
-  background-color: var(--theme-background-light);
-  color: var(--theme-light-red);
-}
-
 @media screen and (min-width: 500px) {
   .scroll-button {
     transition: all 0.5s;
