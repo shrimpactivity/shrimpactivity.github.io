@@ -23,7 +23,7 @@ const Footer = (props) => {
         {<Shrimp />}
       </div>
       <div className="footer-bar">
-        <div style={{ marginRight: "5px", paddingRight: "5px" }}>
+        <div style={{ marginRight: "0px", paddingRight: "5px" }}>
           Built with React
         </div>
         <div style={{ margin: "0px", padding: "0px" }}>
